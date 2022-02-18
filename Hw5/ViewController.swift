@@ -27,16 +27,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func BuyingFirstBeer(_ sender: Any) {
-        BarManager.shared.buyBeer(name: "IPA", volume: setter)
-        BuyingStatus.text = "You buy \(setter) liters of IPA"
+        if BarManager.shared.buyBeer(name: "IPA", volume: setter) > 0
+        {BuyingStatus.text = "You buy \(setter) liters of IPA"}
+        else {BuyingStatus.text = "You can't buy \(setter) liters of IPA"}
     }
     @IBAction func BuyingSecondBeer(_ sender: Any) {
-        BarManager.shared.buyBeer(name: "APA", volume: setter)
-        BuyingStatus.text = "You buy \(setter) liters of APA"
+        if BarManager.shared.buyBeer(name: "APA", volume: setter) > 0
+        {BuyingStatus.text = "You buy \(setter) liters of APA"}
+        else {BuyingStatus.text = "You can't buy \(setter) liters of APA"}
     }
     @IBAction func BuyingThirdBeer(_ sender: Any) {
-        BarManager.shared.buyBeer(name: "OPA", volume: setter)
-        BuyingStatus.text = "You buy \(setter) liters of OPA"
+        if BarManager.shared.buyBeer(name: "OPA", volume: setter) > 0
+        {BuyingStatus.text = "You buy \(setter) liters of OPA"}
+        else {BuyingStatus.text = "You can't buy \(setter) liters of OPA"}
     }
     @IBOutlet weak var FirstBeerInfo: UILabel!
     @IBOutlet weak var SecondBeerInfo: UILabel!
