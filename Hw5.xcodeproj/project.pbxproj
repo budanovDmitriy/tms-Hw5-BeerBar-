@@ -14,6 +14,7 @@
 		1C29CDB627BD8521009A5485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C29CDB527BD8521009A5485 /* Assets.xcassets */; };
 		1C29CDB927BD8521009A5485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C29CDB727BD8521009A5485 /* LaunchScreen.storyboard */; };
 		1C29CDC127BD853F009A5485 /* BarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29CDC027BD853F009A5485 /* BarManager.swift */; };
+		1C9C682D27C00E4900F7C2B1 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C682C27C00E4900F7C2B1 /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1C29CDB827BD8521009A5485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C29CDBA27BD8521009A5485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C29CDC027BD853F009A5485 /* BarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarManager.swift; sourceTree = "<group>"; };
+		1C9C682C27C00E4900F7C2B1 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				1C29CDAC27BD8520009A5485 /* AppDelegate.swift */,
 				1C29CDAE27BD8520009A5485 /* SceneDelegate.swift */,
 				1C29CDC027BD853F009A5485 /* BarManager.swift */,
+				1C9C682C27C00E4900F7C2B1 /* Beer.swift */,
 				1C29CDB027BD8520009A5485 /* ViewController.swift */,
 				1C29CDB227BD8520009A5485 /* Main.storyboard */,
 				1C29CDB527BD8521009A5485 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				1C29CDB127BD8520009A5485 /* ViewController.swift in Sources */,
 				1C29CDAD27BD8520009A5485 /* AppDelegate.swift in Sources */,
+				1C9C682D27C00E4900F7C2B1 /* Beer.swift in Sources */,
 				1C29CDAF27BD8520009A5485 /* SceneDelegate.swift in Sources */,
 				1C29CDC127BD853F009A5485 /* BarManager.swift in Sources */,
 			);
