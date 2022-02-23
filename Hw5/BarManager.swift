@@ -23,7 +23,6 @@ class BarManager {
             return  Beer(price: p.price, name: p.name, country: p.country, overalVolume: p.overalVolume - volume)
     
         }
-        print(money)
         return (money,price)
         
     }
