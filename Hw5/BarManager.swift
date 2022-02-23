@@ -14,10 +14,9 @@ class BarManager {
     static public var shared: BarManager = BarManager()
     private init() { self.money = 0 }
     public func buyBeer(name: String, volume: Double) -> (Double,Double) {
-        guard calculateVolume(name: "IPA") >= volume,
-              calculateVolume(name: "APA") >= volume,
-              calculateVolume(name: "OPA") >= volume else{ return (0,0) }
         guard let buyingBeer = beers.filter({ $0.name == name }).first else { return (0,0) }
+        guard calculateVolume(name:name) >= volume
+               else { return (0,0) }
         let price = buyingBeer.price * volume
         money += price
         beers += beers.filter({ $0.name == name }).map { (p) -> Beer in

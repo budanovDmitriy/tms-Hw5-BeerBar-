@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         stepper.minimumValue = 0.5
         label.text = "Volume Of Beer: " + String(sender.value)
         setter = sender.value
-        print(setter)
     }
     @IBOutlet weak var label: UILabel!
     
@@ -35,7 +34,9 @@ class ViewController: UIViewController {
     @IBAction func BuyingFirstBeer(_ sender: Any) {
         let buingBeer = BarManager.shared.buyBeer(name: "IPA", volume: setter)
         if buingBeer > (0,0)
-        {BuyingStatus.text = "You buy \(setter) liters of IPA for \(buingBeer.1) rubbles"}
+        {BuyingStatus.text = "You buy \(setter) liters of IPA for \(buingBeer.1) rubbles"
+            
+        }
         else {BuyingStatus.text = "You can't buy \(setter) liters of IPA"}
     }
     @IBAction func BuyingSecondBeer(_ sender: Any) {
