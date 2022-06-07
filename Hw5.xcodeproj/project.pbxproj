@@ -13,8 +13,10 @@
 		1C29CDB427BD8520009A5485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C29CDB227BD8520009A5485 /* Main.storyboard */; };
 		1C29CDB627BD8521009A5485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C29CDB527BD8521009A5485 /* Assets.xcassets */; };
 		1C29CDB927BD8521009A5485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C29CDB727BD8521009A5485 /* LaunchScreen.storyboard */; };
-		1C29CDC127BD853F009A5485 /* BarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29CDC027BD853F009A5485 /* BarManager.swift */; };
-		1C9C682D27C00E4900F7C2B1 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C682C27C00E4900F7C2B1 /* Beer.swift */; };
+		1C29CDC127BD853F009A5485 /* BeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29CDC027BD853F009A5485 /* BeerManager.swift */; };
+		1C8FD6742848DE4F008C2459 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1C8FD6732848DE4F008C2459 /* Realm */; };
+		1C8FD6762848DE4F008C2459 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C8FD6752848DE4F008C2459 /* RealmSwift */; };
+		1C968C51284F7431002190D1 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C968C50284F7431002190D1 /* Beers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,8 @@
 		1C29CDB527BD8521009A5485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C29CDB827BD8521009A5485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C29CDBA27BD8521009A5485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C29CDC027BD853F009A5485 /* BarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarManager.swift; sourceTree = "<group>"; };
-		1C9C682C27C00E4900F7C2B1 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		1C29CDC027BD853F009A5485 /* BeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerManager.swift; sourceTree = "<group>"; };
+		1C968C50284F7431002190D1 /* Beers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8FD6762848DE4F008C2459 /* RealmSwift in Frameworks */,
+				1C8FD6742848DE4F008C2459 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +66,8 @@
 			children = (
 				1C29CDAC27BD8520009A5485 /* AppDelegate.swift */,
 				1C29CDAE27BD8520009A5485 /* SceneDelegate.swift */,
-				1C29CDC027BD853F009A5485 /* BarManager.swift */,
-				1C9C682C27C00E4900F7C2B1 /* Beer.swift */,
+				1C29CDC027BD853F009A5485 /* BeerManager.swift */,
+				1C968C4D284F7406002190D1 /* Model */,
 				1C29CDB027BD8520009A5485 /* ViewController.swift */,
 				1C29CDB227BD8520009A5485 /* Main.storyboard */,
 				1C29CDB527BD8521009A5485 /* Assets.xcassets */,
@@ -71,6 +75,14 @@
 				1C29CDBA27BD8521009A5485 /* Info.plist */,
 			);
 			path = Hw5;
+			sourceTree = "<group>";
+		};
+		1C968C4D284F7406002190D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C968C50284F7431002190D1 /* Beers.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +101,10 @@
 			dependencies = (
 			);
 			name = Hw5;
+			packageProductDependencies = (
+				1C8FD6732848DE4F008C2459 /* Realm */,
+				1C8FD6752848DE4F008C2459 /* RealmSwift */,
+			);
 			productName = Hw5;
 			productReference = 1C29CDA927BD8520009A5485 /* Hw5.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 1C29CDA027BD8520009A5485;
+			packageReferences = (
+				1C8FD6722848DE4F008C2459 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1C29CDAA27BD8520009A5485 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,9 +165,9 @@
 			files = (
 				1C29CDB127BD8520009A5485 /* ViewController.swift in Sources */,
 				1C29CDAD27BD8520009A5485 /* AppDelegate.swift in Sources */,
-				1C9C682D27C00E4900F7C2B1 /* Beer.swift in Sources */,
+				1C968C51284F7431002190D1 /* Beers.swift in Sources */,
 				1C29CDAF27BD8520009A5485 /* SceneDelegate.swift in Sources */,
-				1C29CDC127BD853F009A5485 /* BarManager.swift in Sources */,
+				1C29CDC127BD853F009A5485 /* BeerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +385,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C8FD6722848DE4F008C2459 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C8FD6732848DE4F008C2459 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C8FD6722848DE4F008C2459 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1C8FD6752848DE4F008C2459 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C8FD6722848DE4F008C2459 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C29CDA127BD8520009A5485 /* Project object */;
 }
